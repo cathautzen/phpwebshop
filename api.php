@@ -23,6 +23,12 @@ if(isset($data["password"]) && $data["password"] == "KickPHP") {
     if(!empty($data["nameSearch"])){
         $sql .= " AND prodNavn LIKE CONCAT('%', :prodNavn, '%') ";
         $bind[":prodNavn"] = $data["nameSearch"];
+
+        $sql .= " OR prodGenre LIKE CONCAT('%', :prodGenre, '%') ";
+        $bind[":prodGenre"] = $data["nameSearch"];
+
+        $sql .= " OR prodStars LIKE CONCAT('%', :prodStars, '%') ";
+        $bind[":prodStars"] = $data["nameSearch"];
     }
 
     /*

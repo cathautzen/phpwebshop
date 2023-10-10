@@ -1,8 +1,8 @@
 <?php
 require "settings/init.php";
 
-
-$produkt = $db->sql("SELECT * FROM produkter WHERE prodId=23")[0];
+$bind = [':prodId' => $_GET["prodId"]];
+$produkt = $db->sql("SELECT * FROM produkter WHERE prodId=:prodId", $bind, true)[0];
 ?>
 
 <!DOCTYPE html>
