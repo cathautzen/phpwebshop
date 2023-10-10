@@ -20,9 +20,9 @@ if(isset($data["password"]) && $data["password"] == "KickPHP") {
     $sql ="SELECT * FROM produkter WHERE 1=1";
     $bind = [];
 
-    if(!empty($data["nameSeach"])){
-        $sql .= " AND prodNavn = :prodNavn ";
-        $bind[":prodNavn"] = $data["nameSeach"];
+    if(!empty($data["nameSearch"])){
+        $sql .= " AND prodNavn LIKE CONCAT('%', :prodNavn, '%') ";
+        $bind[":prodNavn"] = $data["nameSearch"];
     }
 
     /*

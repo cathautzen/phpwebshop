@@ -80,7 +80,7 @@ VALUES(
 </div>
 <br>
 <div class="container col-12">
-    <p class="d-flex justify-content-center">Denne formular er et praktisk værktøj
+    <p class="insert-p d-flex justify-content-center">Denne formular er et praktisk værktøj
         til at indsamle information om nye film til vores database. Med denne formular kan
         vi nemt opdatere vores samling med relevante oplysninger om titel, instruktør og
         udgivelsesår for hver film, hvilket sikrer, at vores database forbliver opdateret

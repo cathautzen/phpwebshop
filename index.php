@@ -34,32 +34,64 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </head>
 
 <body>
+<div class="container d-flex justify-content-center mt-5">
+    <h1 class="fw-bold text-uppercase">Filmshop</h1>
+</div>
+<br>
+<div class="container col-12">
+    <p class="insert-p d-flex justify-content-center">Hos os finder du et omfattende udvalg af film fra forskellige genrer, årtier og verdensdele. Uanset om du er på jagt efter den seneste blockbuster, en klassisk favorit eller en skjult perle, har vi det hele samlet her til dig.<br>
+        <br>
+        Så start din søgen nu, og lad os hjælpe dig med at finde den perfekte film til din næste filmoplevelse!</p>
+</div>
+<br>
+<div class="container">
 
-<?php
-foreach ($produkter as $produkt){
-    ?>
-<div class="row border-bottom">
-    <div class="col-12 col-md-4">
-        <?php
-        echo $produkt->prodNavn;
-        ?>
-    </div>
-    <div class="col-12 col-md-4">
-        <?php
-        echo number_format($produkt->prodPris, 2, ",", ".");
-        ?>
-    </div>
-    <div class="col-12 col-md-2">
-        <a href="index.php?type=rediger&id=<?php echo $produkt->prodId; ?>">Rediger</a>
-    </div>
-    <div class="col-12 col-md-2">
-        <a href="index.php?type=slet&id=<?php echo $produkt->prodId; ?>">Slet</a>
+    <div class="products">
+       <div class="filter p-5">
+           <div class="row">
+              <div class="col-md-4 offset-md-4">
+                 <input type="search" class="form-control nameSearch" placeholder="Søg her">
+              </div>
+           </div>
+       </div>
+
+        <div class="items">
+
+        </div>
+
     </div>
 </div>
-<?php
-}
-?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+<script type="module">
+   /* import Kage from "./js/kage.js";
+
+    const kage = new Kage();
+
+    kage.kageEllerHvad();*/
+
+    /*kage.skalKimGiveKage(true ).then((response) => {
+
+        console.log(response);
+
+        kage.erDetEnStorKage('small').then((response) => {
+            console.log(response);
+
+        }).catch((error) => {
+            console.log(error);
+        });
+
+    }).catch((error) => {
+        console.log(error);
+    });*/
+</script>
+
+<script type="module">
+    import Users from "./js/products.js";
+    import Products from "./js/products";
+    const products = new Products();
+    products.init();
+</script>
 </body>
 </html>
