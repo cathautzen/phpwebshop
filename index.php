@@ -1,4 +1,3 @@
-<?php include 'navbar.php'; ?>
 <?php
 require "settings/init.php";
 
@@ -22,7 +21,6 @@ $produkter = $db->sql("SELECT * FROM produkter");
 <html lang="da">
 <head>
     <meta charset="utf-8">
-
     <title>Film liste</title>
 
     <meta name="robots" content="All">
@@ -36,6 +34,7 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </head>
 
 <body>
+<?php include 'navbar.php'; ?>
 <div class="container mt-5">
     <h1 class="fw-bold text-uppercase border-bottom">Filmshop</h1>
 </div>

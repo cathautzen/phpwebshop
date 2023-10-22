@@ -1,4 +1,3 @@
-<?php include 'navbar.php'; ?>
 <?php
 require "settings/init.php";
 
@@ -25,7 +24,7 @@ $produkt = $db->sql("SELECT * FROM produkter WHERE prodId=:prodId", $bind, true)
 </head>
 
 <body>
-
+<?php include 'navbar.php'; ?>
 <div class="container mt-4 d-flex justify-content-center">
     <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
     <lord-icon
