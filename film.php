@@ -1,3 +1,4 @@
+<?php include 'navbar.php'; ?>
 <?php
 require "settings/init.php";
 
@@ -77,6 +78,8 @@ $produkt = $db->sql("SELECT * FROM produkter WHERE prodId=:prodId", $bind, true)
         </div>
     </div>
 </div>
+<?php include 'footer.php'; ?>
 
+<script src="https://kit.fontawesome.com/645a3a1c42.js" crossorigin="anonymous"></script>
 </body>
 </html>

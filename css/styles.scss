@@ -37,6 +37,52 @@ p {
 	color: #2d2d2d;
 }
 
+.navbar-custom {
+	background: linear-gradient(to top, #362e33, #171315);
+}
+
+
+.navbar-custom .navbar-nav .nav-link {
+	color: #fff; /* Farve for menupunkterne */
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+	color: #7e5f70; /* Farve ved hover over menupunkterne */
+}
+
+/* Centerer menuen */
+.navbar-custom .navbar-nav {
+	display: flex;
+	justify-content: center;
+}
+
+/* Styling af login-knap til højre */
+.navbar-custom .login-btn {
+	color: #fff;
+	background-color: #7e5f70;
+	border: none;
+}
+
+.navbar-custom .login-btn:hover {
+	background-color: #34212c;
+	color: white;
+}
+.image-overlay-container {
+	position: relative;
+}
+
+.overlay {
+	position: absolute;
+	width:100%;
+	height: 100%;
+	background: linear-gradient(to left, transparent, #362e33);
+}
+
+.nameSearch {
+	background-color: rgba(89,88,93,0);
+	border-radius: 0;
+}
+
 .insert-p {
 	color: white;
 }
@@ -91,6 +137,20 @@ label {
 }
 
 .products .items .card-img-top {
-	height: 200px;
+	height: 440px;
 	object-fit: cover;
+}
+
+.footer-custom {
+	background: linear-gradient(#362e33, #171315);
+	color: white;
+}
+
+.footer-custom h5 {
+	color: white;
+}
+
+.footer-custom a {
+	color: white;
+	text-decoration: none;
 }

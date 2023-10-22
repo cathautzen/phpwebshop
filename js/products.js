@@ -33,13 +33,16 @@ export default class Products {
             col.classList.add('col-md-6', 'col-lg-4', 'col-xl-3');
 
             col.innerHTML = `
-           <div class="card">
+           <div class="card h-100">
                 <img src="images/prodBillede/${item.prodBillede}" class="card-img-top">
                     <div class="card-body">
                        <h5 class="card-title">${item.prodNavn}</h5> 
                        <p class="card-text">${item.prodBeskrivelse}</p>
-                       <a href="film.php?prodId=${item.prodId}" class="mt-2 btn btn-primary w-100">Gå til film</a>
+                       
                     </div>
+                    <div class="card-footer">
+                            <a href="film.php?prodId=${item.prodId}" class="btn-custom mt-2 btn btn-primary w-100">Gå til film</a>
+                       </div>
            </div> 
         `;
 

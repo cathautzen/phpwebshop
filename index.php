@@ -1,4 +1,4 @@
-
+<?php include 'navbar.php'; ?>
 <?php
 require "settings/init.php";
 
@@ -15,6 +15,8 @@ if(!empty($_GET["type"])){
 
 $produkter = $db->sql("SELECT * FROM produkter");
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="da">
@@ -34,24 +36,35 @@ $produkter = $db->sql("SELECT * FROM produkter");
 </head>
 
 <body>
-<div class="container d-flex justify-content-center mt-5">
-    <h1 class="fw-bold text-uppercase">Filmshop</h1>
+<div class="container mt-5">
+    <h1 class="fw-bold text-uppercase border-bottom">Filmshop</h1>
 </div>
 <br>
-<div class="container col-12">
-    <p class="insert-p d-flex justify-content-center">Hos os finder du et omfattende udvalg af film fra forskellige genrer, årtier og verdensdele. Uanset om du er på jagt efter den seneste blockbuster, en klassisk favorit eller en skjult perle, har vi det hele samlet her til dig.<br>
-        <br>
-        Så start din søgen nu, og lad os hjælpe dig med at finde den perfekte film til din næste filmoplevelse!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <p class="insert-p">Hos os finder du et omfattende udvalg af film fra forskellige genrer, årtier og verdensdele. Uanset om du er på jagt efter den seneste blockbuster, en klassisk favorit eller en skjult perle, har vi det hele samlet her til dig.<br>
+                <br>
+                Så start din søgen nu, og lad os hjælpe dig med at finde den perfekte film til din næste filmoplevelse!</p>
+        </div>
+        <div class="col-md-6 image-overlay-container">
+            <div class="overlay"></div>
+            <img class="top-dino" src="images/top-dino.jpg">
+        </div>
+    </div>
 </div>
-<br>
+
 <div class="container">
 
     <div class="products">
        <div class="filter p-5">
-           <div class="row">
-              <div class="col-md-4 offset-md-4">
-                 <input type="search" class="form-control nameSearch" placeholder="Søg her">
+           <div class="row align-items-center">
+              <div class="col-11">
+                 <input type="search" class="form-control nameSearch" placeholder="Søg efter navn, genre, skuespiller">
               </div>
+                <div class="col-1 pe-0">
+                   <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #ffffff;"></i>
+               </div>
            </div>
        </div>
 
@@ -61,6 +74,8 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
     </div>
 </div>
+
+<?php include 'footer.php'; ?>
 
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -89,9 +104,11 @@ $produkter = $db->sql("SELECT * FROM produkter");
 
 <script type="module">
     import Users from "./js/products.js";
-    import Products from "./js/products";
+    import Products from "./js/products.js";
+
     const products = new Products();
     products.init();
 </script>
+<script src="https://kit.fontawesome.com/645a3a1c42.js" crossorigin="anonymous"></script>
 </body>
 </html>

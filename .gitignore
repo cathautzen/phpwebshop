@@ -2,3 +2,5 @@
 node_modules
 css/*.css
 css/*.css.map
+
+settings/init.php
